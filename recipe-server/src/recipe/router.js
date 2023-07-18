@@ -4,9 +4,20 @@ const controller = require('./controller');
 
 /**
  * @swagger
+ *
+ * tags:
+ *   name: Recipes
+ *   description: API endpoints for recipes
+ */
+
+/**
+ * @swagger
+ *
  * /api/v1/recipes:
  *   get:
  *     summary: Retrieve a list of Recipess
+ *     tags:
+ *       - Recipes
  *     responses:
  *       200:
  *         description: A list of Recipess
@@ -18,6 +29,8 @@ router.get('/recipes', controller.getRecipeALL);
  * /api/v1/recipes/{id}:
  *   get:
  *     summary: Retrieve a single Recipes by ID
+ *     tags:
+ *       - Recipes
  *     parameters:
  *       - in: path
  *         name: id
@@ -38,6 +51,8 @@ router.get('/recipes/:id', controller.FindRecipeById);
  * /api/v1/recipes:
  *   post:
  *     summary: Create a new Recipes
+ *     tags:
+ *       - Recipes
  *     requestBody:
  *       required: true
  *       content:
@@ -69,6 +84,8 @@ router.post('/recipes', controller.CreateRecipe);
  * /api/v1/recipes/{id}:
  *   put:
  *     summary: Update an existing Recipes by ID
+ *     tags:
+ *       - Recipes
  *     parameters:
  *       - in: path
  *         name: id
@@ -109,6 +126,8 @@ router.put('/recipes/:id', controller.UpdateRecipeById);
  * /api/v1/recipes/{id}:
  *   delete:
  *     summary: Delete a Recipes by ID
+ *     tags:
+ *       - Recipes
  *     parameters:
  *       - in: path
  *         name: id
