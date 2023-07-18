@@ -1,6 +1,6 @@
-const express = require("express")
-const router = express.Router()
-const controller = require("./controller")
+const express = require('express');
+const router = express.Router();
+const controller = require('./controller');
 
 /**
  * @swagger
@@ -11,7 +11,7 @@ const controller = require("./controller")
  *       200:
  *         description: A list of Recipess
  */
-router.get("/recipes", controller.getRecipeALL)
+router.get('/recipes', controller.getRecipeALL);
 
 /**
  * @swagger
@@ -31,7 +31,7 @@ router.get("/recipes", controller.getRecipeALL)
  *       404:
  *         description: Recipes not found
  */
-router.get("/recipes/:id", controller.FindRecipeById)
+router.get('/recipes/:id', controller.FindRecipeById);
 
 /**
  * @swagger
@@ -48,7 +48,7 @@ router.get("/recipes/:id", controller.FindRecipeById)
  *               title:
  *                 type: string
  *               description:
- *                 type: number
+ *                 type: string
  *               category:
  *                 type: string
  *               ingredients:
@@ -62,7 +62,7 @@ router.get("/recipes/:id", controller.FindRecipeById)
  *       400:
  *         description: Invalid request body
  */
-router.post("/recipes", controller.CreateRecipe)
+router.post('/recipes', controller.CreateRecipe);
 
 /**
  * @swagger
@@ -86,7 +86,7 @@ router.post("/recipes", controller.CreateRecipe)
  *               title:
  *                 type: string
  *               description:
- *                 type: number
+ *                 type: string
  *               category:
  *                 type: string
  *               ingredients:
@@ -102,7 +102,7 @@ router.post("/recipes", controller.CreateRecipe)
  *       400:
  *         description: Invalid request body
  */
-router.put("/recipes/:id", controller.UpdateRecipeById)
+router.put('/recipes/:id', controller.UpdateRecipeById);
 
 /**
  * @swagger
@@ -122,6 +122,6 @@ router.put("/recipes/:id", controller.UpdateRecipeById)
  *       404:
  *         description: Recipes not found
  */
-router.delete("/recipes/:id", controller.DeteteRecipeById)
+router.delete('/recipes/:id', controller.DeteteRecipeById);
 
-module.exports = router
+module.exports = router;
