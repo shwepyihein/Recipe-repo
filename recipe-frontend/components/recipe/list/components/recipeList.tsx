@@ -6,7 +6,7 @@ type RecipeListProps = {
   searchInput: string;
   data: RecipeType[];
   loading: boolean;
-  handleDelete: (id: string) => void;
+  handleDelete: (id: number) => void;
 };
 
 const RecipeList = ({
@@ -64,8 +64,9 @@ const RecipeList = ({
                 </Link>
 
                 <button
+                  data-testid={`delete-button-${idx}`}
                   onClick={() => {
-                    handleDelete(item.id as string);
+                    handleDelete(item.id as number);
                   }}
                   className="outline-none bg-none"
                 >

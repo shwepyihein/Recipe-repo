@@ -1,6 +1,5 @@
 type RecipeType = {
-  id?: string;
-  mongo_id?: string;
+  id?: number;
   title: string;
   category: string;
   description: string;

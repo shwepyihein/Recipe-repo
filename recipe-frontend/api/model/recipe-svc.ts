@@ -1,6 +1,6 @@
 import { baseAPI } from '../client';
 
-export const deleteRecipe = (id?: string) => {
+export const deleteRecipe = (id?: number) => {
   return baseAPI.delete(`/recipes/${id}`);
 };
 
@@ -12,7 +12,7 @@ export const updateRecipe = (id: string | undefined, data: RecipeType) => {
   return baseAPI.put(`/recipes/${id}`, data);
 };
 
-export const fetchallRecipes = (page: string | number) => {
+export const fetchallRecipes = () => {
   return baseAPI.get('/recipes');
 };
 

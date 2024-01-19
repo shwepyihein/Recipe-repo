@@ -12,7 +12,7 @@ const useRecipeList = () => {
 
   const fetchRecipe = async () => {
     try {
-      const { data } = await fetchallRecipes(1);
+      const { data } = await fetchallRecipes();
       setRecipeList(data);
       setFetchLoading(false);
     } catch (error) {
@@ -20,7 +20,7 @@ const useRecipeList = () => {
     }
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: number) => {
     try {
       await deleteRecipe(id);
       fetchRecipe();
