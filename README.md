@@ -6,7 +6,7 @@
 
 <br/>
 
-### [api documentation link](https://recipe-repo.onrender.com/api-docs/)
+### [api documentation link](https://recipe-apo.onrender.com/api-docs/)
 
 <br/>
 

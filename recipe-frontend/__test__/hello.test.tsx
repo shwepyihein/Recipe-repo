@@ -1,5 +1,5 @@
 describe('Home', () => {
-  const useRouter = jest.spyOn(require('next/router'), 'useRouter')
+  const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 
   useRouter.mockImplementation(() => ({
     route: '/',
@@ -13,9 +13,9 @@ describe('Home', () => {
     },
     beforePopState: jest.fn(() => null),
     prefetch: jest.fn(() => null),
-  }))
+  }));
 
   test('Testing Render', () => {
-    expect(true).toBe(true)
-  })
-})
+    expect(true).toBe(true);
+  });
+});
